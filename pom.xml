@@ -4,7 +4,7 @@
 	<groupId>com.yuelinghui</groupId>
 	<artifactId>jenkins_test</artifactId>
 	<version>1.0.0</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<name>springmvc-javaapp</name>
 	<description>springframework4.3.10 + mysql5.1.16</description>
 
