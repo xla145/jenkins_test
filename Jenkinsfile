@@ -2,7 +2,7 @@ node("master") {
     checkout scm
     def workspace = pwd()
     def TOMCAT_HOME = "/home/xla_test/apache-tomcat-7.0.84"
-    def MVN_HOME = tool 'apache-maven-3.5.4'
+    def MVN_HOME = '/usr/maven/apache-maven-3.5.4'
     def MVN_BIN = "${MVN_HOME}/bin/mvn"
     stage('Test') {
         echo "Test start..."
