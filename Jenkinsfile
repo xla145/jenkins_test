@@ -19,7 +19,7 @@ node("master") {
             ${MVN_BIN} package -Dmaven.test.skip=true
             ${TOMCAT_HOME}/bin/catalina.sh stop || true
             rm -rf ${TOMCAT_HOME}/webapps/ROOT/*
-            cp ${PROJECT_HOME}/target/${PROJECT_NAME}-${PROJECT_VERSION}.war ${TOMCAT_HOME}/webapps/ROOT/
+            cp ${PROJECT_HOME}/${PROJECT_NAME}/target/${PROJECT_NAME}-${PROJECT_VERSION}.war ${TOMCAT_HOME}/webapps/ROOT/
             unzip ${TOMCAT_HOME}/webapps/ROOT/${PROJECT_NAME}-${PROJECT_VERSION}.war -d ${TOMCAT_HOME}/webapps/ROOT >/dev/null
             rm -f ${TOMCAT_HOME}/webapps/ROOT/${PROJECT_NAME}-${PROJECT_VERSION}.war
             ${TOMCAT_HOME}/bin/catalina.sh start
